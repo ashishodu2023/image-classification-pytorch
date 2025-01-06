@@ -1,7 +1,0 @@
-[build]
-  base = "."
-  command = "pip install -r requirements.txt"
-  functions = "functions"
-
-[[plugins]]
-  package = "@netlify/plugin-python"

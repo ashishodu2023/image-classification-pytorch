@@ -1,5 +1,5 @@
 [build]
-  base = "image-classification-pytorch"
+  base = "."
   command = "pip install -r requirements.txt"
   functions = "functions"
 

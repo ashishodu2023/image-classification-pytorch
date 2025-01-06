@@ -1,0 +1,7 @@
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.7.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+imutils>=0.5.4
+matplotlib>=3.5.0

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9b139362741147399eae3317057733fa/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9b139362741147399eae3317057733fa
+run_name: selective-panda-806
+run_uuid: 9b139362741147399eae3317057733fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736214710400
+status: 1
+tags: []
+user_id: Ashish

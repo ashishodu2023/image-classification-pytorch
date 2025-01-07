@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/dee3cd2b06494c849bc2a8624cec2dd2/artifacts
+end_time: 1736213250595
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dee3cd2b06494c849bc2a8624cec2dd2
+run_name: carefree-sponge-365
+run_uuid: dee3cd2b06494c849bc2a8624cec2dd2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736212709762
+status: 4
+tags: []
+user_id: Ashish

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/31d5bc2577f54bfbb3fbb6d730613e51/artifacts
+end_time: 1736214782083
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 31d5bc2577f54bfbb3fbb6d730613e51
+run_name: wise-seal-762
+run_uuid: 31d5bc2577f54bfbb3fbb6d730613e51
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736214773255
+status: 4
+tags: []
+user_id: Ashish

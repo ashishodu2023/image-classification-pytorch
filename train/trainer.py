@@ -22,6 +22,8 @@ class Trainer:
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.scaler = GradScaler()  # For mixed precision training
         logging.info(f"Using device: {self.device}")
+        mlflow.set_tracking_uri("http://127.0.0.1:5000")
+        mlflow.set_experiment("image-classification")
 
     def build_model(self, num_classes):
         logging.info("=====================Building the model========================")
@@ -74,7 +76,7 @@ class Trainer:
                         labels = labels.to(self.device, non_blocking=True)
 
                         optimizer.zero_grad()
-                        with autocast():  # Mixed precision training
+                        with torch.amp.autocast(device_type='cuda'):  # Mixed precision training
                             outputs = model(inputs)
                             _, preds = torch.max(outputs, 1)
                             loss = criterion(outputs, labels)
@@ -137,4 +139,14 @@ class Trainer:
         plt.ylabel("Loss/Accuracy")
         plt.legend(loc="lower left")
         plt.savefig(self.plot_path)
-        mlflow.log_artifact(self.plot_path)
+        #mlflow.log_artifact(self.plot_path)
+        # Log artifacts to MLflow
+        with mlflow.start_run():
+            logging.info("================Logging model and artifacts to MLflow======================")
+            # Log the trained model to MLflow
+            mlflow.pytorch.log_model(model, artifact_path="model")
+            # Log the training plot
+            mlflow.log_artifact(self.plot_path)
+            # Log the label binarizer
+            mlflow.log_artifact(self.label_bin_path)
+            logging.info("=================Model and artifacts logged successfully===================")
